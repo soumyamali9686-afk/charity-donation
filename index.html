@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GiveHope — Charity Donation Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">❤</span>
+        <span class="logo-text">GiveHope</span>
+      </div>
+      <nav class="nav">
+        <a href="#causes">Causes</a>
+        <a href="#donate">Donate</a>
+        <a href="#impact">Impact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Every Rupee Counts</p>
+      <h1 class="hero-title">Change a Life<br/><span>Today</span></h1>
+      <p class="hero-sub">Join thousands of donors making real, lasting change across communities worldwide.</p>
+      <a href="#donate" class="btn-primary">Make a Donation</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-target="12400">0</span><span class="stat-label">Donors</span></div>
+      <div class="stat"><span class="stat-num" data-target="340">0</span><span class="stat-label">Projects Funded</span></div>
+      <div class="stat"><span class="stat-num" data-target="89000">0</span><span class="stat-label">Lives Touched</span></div>
+    </div>
+  </section>
+
+  <!-- CAUSES -->
+  <section class="causes" id="causes">
+    <div class="section-header">
+      <p class="section-tag">Our Work</p>
+      <h2>Choose a Cause</h2>
+      <p class="section-sub">100% of your donation goes directly to the cause you choose.</p>
+    </div>
+    <div class="causes-grid">
+      <div class="cause-card active" data-cause="Education">
+        <div class="cause-icon">📚</div>
+        <h3>Education</h3>
+        <p>Provide books, scholarships, and school supplies to children in need.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>
+        <div class="cause-meta"><span>₹3,60,000 raised</span><span>72% of goal</span></div>
+      </div>
+      <div class="cause-card" data-cause="Healthcare">
+        <div class="cause-icon">🏥</div>
+        <h3>Healthcare</h3>
+        <p>Fund medical camps, medicines, and health check-ups in rural areas.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:58%"></div></div>
+        <div class="cause-meta"><span>₹2,90,000 raised</span><span>58% of goal</span></div>
+      </div>
+      <div class="cause-card" data-cause="Clean Water">
+        <div class="cause-icon">💧</div>
+        <h3>Clean Water</h3>
+        <p>Build wells and filtration systems for communities without clean water.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div>
+        <div class="cause-meta"><span>₹2,25,000 raised</span><span>45% of goal</span></div>
+      </div>
+      <div class="cause-card" data-cause="Food Relief">
+        <div class="cause-icon">🌾</div>
+        <h3>Food Relief</h3>
+        <p>Fight hunger by distributing nutritious meals and food kits.</p>
+        <div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div>
+        <div class="cause-meta"><span>₹4,15,000 raised</span><span>83% of goal</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATION FORM -->
+  <section class="donate-section" id="donate">
+    <div class="donate-wrapper">
+      <div class="donate-left">
+        <p class="section-tag">Make a Difference</p>
+        <h2>Your Donation</h2>
+        <p>Fill in your details below and choose how much you'd like to give. Every contribution, big or small, changes lives.</p>
+        <ul class="trust-list">
+          <li>✅ 80G Tax Exemption Available</li>
+          <li>✅ Secure & Encrypted Payment</li>
+          <li>✅ Instant Donation Receipt</li>
+          <li>✅ 100% Goes to the Cause</li>
+        </ul>
+      </div>
+      <div class="donate-right">
+        <form class="donate-form" id="donationForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" placeholder="Aarav" required />
+              <span class="error-msg" id="firstNameErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" placeholder="Sharma" required />
+              <span class="error-msg" id="lastNameErr"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="aarav@example.com" required />
+            <span class="error-msg" id="emailErr"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="+91 98765 43210" />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Street Address *</label>
+            <input type="text" id="address" placeholder="123, MG Road" required />
+            <span class="error-msg" id="addressErr"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City *</label>
+              <input type="text" id="city" placeholder="Bengaluru" required />
+              <span class="error-msg" id="cityErr"></span>
+            </div>
+            <div class="form-group">
+              <label for="pincode">PIN Code</label>
+              <input type="text" id="pincode" placeholder="560001" maxlength="6" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            <select id="state">
+              <option value="">Select State</option>
+              <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
+              <option>Delhi</option><option>Goa</option><option>Gujarat</option>
+              <option>Haryana</option><option>Karnataka</option><option>Kerala</option>
+              <option>Madhya Pradesh</option><option>Maharashtra</option><option>Odisha</option>
+              <option>Punjab</option><option>Rajasthan</option><option>Tamil Nadu</option>
+              <option>Telangana</option><option>Uttar Pradesh</option><option>West Bengal</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Select Cause *</label>
+            <div class="cause-select-row">
+              <button type="button" class="cause-btn active" data-val="Education">📚 Education</button>
+              <button type="button" class="cause-btn" data-val="Healthcare">🏥 Healthcare</button>
+              <button type="button" class="cause-btn" data-val="Clean Water">💧 Clean Water</button>
+              <button type="button" class="cause-btn" data-val="Food Relief">🌾 Food Relief</button>
+            </div>
+            <input type="hidden" id="selectedCause" value="Education" />
+          </div>
+
+          <div class="form-group">
+            <label>Donation Amount (₹) *</label>
+            <div class="amount-row">
+              <button type="button" class="amount-btn" data-amt="100">₹100</button>
+              <button type="button" class="amount-btn active" data-amt="500">₹500</button>
+              <button type="button" class="amount-btn" data-amt="1000">₹1,000</button>
+              <button type="button" class="amount-btn" data-amt="5000">₹5,000</button>
+              <button type="button" class="amount-btn custom-btn" data-amt="custom">Custom</button>
+            </div>
+            <input type="number" id="customAmount" class="custom-amount hidden" placeholder="Enter custom amount (₹)" min="1" />
+            <input type="hidden" id="selectedAmount" value="500" />
+            <span class="error-msg" id="amountErr"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" rows="3" placeholder="A note of encouragement or dedication..."></textarea>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="anonymous" />
+              <span>Make this donation anonymous</span>
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="taxReceipt" checked />
+              <span>I want an 80G tax receipt</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text">Donate Now ❤</span>
+            <span class="btn-loader hidden">Processing...</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT SECTION -->
+  <section class="impact" id="impact">
+    <div class="section-header light">
+      <p class="section-tag">Our Impact</p>
+      <h2>What Your Money Does</h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <span class="impact-icon">📚</span>
+        <p><strong>₹500</strong> provides a child's school kit for a year</p>
+      </div>
+      <div class="impact-card">
+        <span class="impact-icon">🏥</span>
+        <p><strong>₹1,000</strong> funds a health check-up for 5 people</p>
+      </div>
+      <div class="impact-card">
+        <span class="impact-icon">💧</span>
+        <p><strong>₹2,000</strong> gives clean water access for a month</p>
+      </div>
+      <div class="impact-card">
+        <span class="impact-icon">🌾</span>
+        <p><strong>₹250</strong> feeds a family for a week</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="logo"><span class="logo-icon">❤</span><span class="logo-text">GiveHope</span></div>
+      <p>Registered Non-Profit | 80G Certified | FCRA Approved</p>
+      <p class="footer-small">© 2025 GiveHope Foundation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-icon">🎉</div>
+      <h2>Thank You!</h2>
+      <p id="modalMsg"></p>
+      <p class="modal-sub">A confirmation email will be sent to your inbox with your donation receipt.</p>
+      <button class="btn-primary" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
